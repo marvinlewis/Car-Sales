@@ -33,9 +33,10 @@ export const carReducer = (state=initialState, action) => {
         case BUY_ITEM : 
         return {
             ...state,
+                additionalPrice : action.payload.price,
                 car: {
                     ...state.car,
-                    features :[...state.car.features, action.payload ]
+                    features :[...state.car.features, action.payload]
                 }
         }
         default :
